@@ -1,9 +1,9 @@
-﻿<%@ Page Title="MyAppUserList" Language="C#" MasterPageFile="~/Site.Master" CodeBehind="Default.aspx.cs" Inherits="WebApplication2.MyAppUsers.Default" %>
+﻿<%@ Page Title="Profile" Language="C#" MasterPageFile="~/Site.Master" CodeBehind="Default.aspx.cs" Inherits="WebApplication2.MyAppUsers.Default" %>
 <%@ Register TagPrefix="FriendlyUrls" Namespace="Microsoft.AspNet.FriendlyUrls" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
-    <h2>MyAppUsers List</h2>
+    <h2>Profile</h2>
     <p>
-        <asp:HyperLink runat="server" NavigateUrl="Insert" Text="Create new" />
+      <!--  <asp:HyperLink runat="server" NavigateUrl="Insert" Text="Create new" /> -->
     </p>
     <div>
         <asp:ListView id="ListView1" runat="server"
@@ -17,6 +17,15 @@
                 <table class="table">
                     <thead>
                         <tr>
+
+                            <th>
+								<asp:LinkButton Text="First Name" CommandName="Sort" CommandArgument="FirstName" runat="Server" />
+							</th>
+                            <th>
+								<asp:LinkButton Text="Last Name" CommandName="Sort" CommandArgument="LastName" runat="Server" />
+							</th>
+
+
                             <th>
 								 <!-- <asp:LinkButton Text="Id" CommandName="Sort" CommandArgument="Id" runat="Server" /> -->
 							</th>
@@ -36,7 +45,7 @@
 								<asp:LinkButton Text="PhoneNumber" CommandName="Sort" CommandArgument="PhoneNumber" runat="Server" />
 							</th>
                             <th>
-								<asp:LinkButton Text="PhoneNumberConfirmed" CommandName="Sort" CommandArgument="PhoneNumberConfirmed" runat="Server" />
+								<!-- <asp:LinkButton Text="PhoneNumberConfirmed" CommandName="Sort" CommandArgument="PhoneNumberConfirmed" runat="Server" /> -->
 							</th>
                             <th>
 								<!-- <asp:LinkButton Text="TwoFactorEnabled" CommandName="Sort" CommandArgument="TwoFactorEnabled" runat="Server" /> -->
@@ -70,6 +79,15 @@
             </LayoutTemplate>
             <ItemTemplate>
                 <tr>
+
+                    <td>
+								<asp:DynamicControl runat="server" DataField="FirstName" ID="FirstName" Mode="ReadOnly" />
+							</td>
+
+                    <td>
+								<asp:DynamicControl runat="server" DataField="LastName" ID="LastName" Mode="ReadOnly" />
+							</td>
+
 							<td>
 								 <!-- <asp:DynamicControl runat="server" DataField="Id" ID="Id" Mode="ReadOnly" /> -->
 							</td>

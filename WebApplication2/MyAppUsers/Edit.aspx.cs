@@ -16,6 +16,7 @@ namespace WebApplication2.MyAppUsers
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Context.User.Identity.IsAuthenticated) Response.Redirect("~/Default.aspx");
         }
 
         // This is the Update methd to update the selected MyAppUser item

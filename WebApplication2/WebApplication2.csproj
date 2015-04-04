@@ -532,6 +532,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201503192229342_InitialCreate.cs" />
+    <Compile Include="Migrations\201503192229342_InitialCreate.Designer.cs">
+      <DependentUpon>201503192229342_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201504032208507_NameEmailID.cs" />
+    <Compile Include="Migrations\201504032208507_NameEmailID.Designer.cs">
+      <DependentUpon>201504032208507_NameEmailID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="MyAppUsers\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -594,6 +603,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201503192229342_InitialCreate.resx">
+      <DependentUpon>201503192229342_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504032208507_NameEmailID.resx">
+      <DependentUpon>201504032208507_NameEmailID.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
