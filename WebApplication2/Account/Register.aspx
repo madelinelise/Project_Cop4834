@@ -20,14 +20,14 @@
                     CssClass="text-danger" ErrorMessage="First name field is required." />
 
 
-
+                </div>
                 <asp:Label runat="server" AssociatedControlID="LastName" CssClass="col-md-2 control-label">Last Name</asp:Label>
             <div class="col-md-10">
                 <asp:TextBox runat="server" ID="LastName" CssClass="form-control" />
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="LastName"
                     CssClass="text-danger" ErrorMessage="Last name field is required." />
 
-             
+             </div>
 
             <asp:Label runat="server" AssociatedControlID="Email" CssClass="col-md-2 control-label">Email</asp:Label>
             <div class="col-md-10">
@@ -56,6 +56,14 @@
         </div>
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
+                What type of account? <asp:DropDownList ID="ddlRole" runat="server">
+                    <asp:ListItem>canEdit</asp:ListItem>
+                    <asp:ListItem>Data Entry</asp:ListItem>
+                </asp:DropDownList>
+
+                <br />
+
+                <br />
                 <asp:Button runat="server" OnClick="CreateUser_Click" Text="Register" CssClass="btn btn-default" />
             </div>
         </div>

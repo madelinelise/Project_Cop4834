@@ -23,7 +23,15 @@ namespace WebApplication2.MyAppUsers
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if (!Context.User.Identity.IsAuthenticated) Response.Redirect("~/Default.aspx");
+           
+
+            if (Context.User.IsInRole("Administrator"))
+            {
+                Response.Redirect("~/Default.aspx");
+                
+            }
+
+           
         }
 
         // Model binding method to get List of MyAppUser entries
