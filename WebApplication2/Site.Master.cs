@@ -68,9 +68,17 @@ namespace WebApplication2
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (HttpContext.Current.User.IsInRole("Data Entry"))
+            if (HttpContext.Current.User.IsInRole("canEdit"))
             {
                 adminLink.Visible = true;
+            }
+            if (HttpContext.Current.User.IsInRole("Data Entry"))
+            {
+                dataLink.Visible = true;
+            }
+            if (HttpContext.Current.User.IsInRole("Event Manager"))
+            {
+                eventLink.Visible = true;
             }
         }
 

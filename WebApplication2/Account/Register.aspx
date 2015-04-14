@@ -57,7 +57,7 @@
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 What type of account? <asp:DropDownList ID="ddlRole" runat="server">
-                    <asp:ListItem>canEdit</asp:ListItem>
+                    <asp:ListItem>Event Manager</asp:ListItem>
                     <asp:ListItem>Data Entry</asp:ListItem>
                 </asp:DropDownList>
 

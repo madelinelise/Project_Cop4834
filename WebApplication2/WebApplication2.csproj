@@ -196,6 +196,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="DataEntry\DataEntryDefault.aspx" />
     <Content Include="DynamicData\FieldTemplates\Boolean.ascx" />
     <Content Include="DynamicData\FieldTemplates\Boolean_Edit.ascx" />
     <Content Include="DynamicData\FieldTemplates\Children.ascx" />
@@ -214,6 +215,7 @@
     <Content Include="DynamicData\FieldTemplates\Text_Edit.ascx" />
     <Content Include="DynamicData\FieldTemplates\Url.ascx" />
     <Content Include="DynamicData\FieldTemplates\Url_Edit.ascx" />
+    <Content Include="EventManager\EventManagerDefault.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="MyAppUsers\Default.aspx" />
     <Content Include="MyAppUsers\Delete.aspx" />
@@ -227,6 +229,8 @@
     <Content Include="Account\Web.config" />
     <Content Include="ApplicationInsights.config" />
     <Content Include="Admin\Web.config" />
+    <Content Include="DataEntry\Web.config" />
+    <Content Include="EventManager\Web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -405,6 +409,13 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DataEntry\DataEntryDefault.aspx.cs">
+      <DependentUpon>DataEntryDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataEntry\DataEntryDefault.aspx.designer.cs">
+      <DependentUpon>DataEntryDefault.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -537,6 +548,13 @@
     </Compile>
     <Compile Include="DynamicData\FieldTemplates\Url_Edit.ascx.designer.cs">
       <DependentUpon>Url_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EventManager\EventManagerDefault.aspx.cs">
+      <DependentUpon>EventManagerDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EventManager\EventManagerDefault.aspx.designer.cs">
+      <DependentUpon>EventManagerDefault.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
